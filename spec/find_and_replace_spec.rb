@@ -13,4 +13,8 @@ describe("String#find_and_replace") do
   it('works on strings that has two words') do
     expect('the bird'.find_and_replace('bird', 'duck')).to(eq('the duck'))
   end
+
+  it('works on strings with many words') do
+    expect('the bird flies to the barn'.find_and_replace('the', 'a')).to(eq('a bird flies to a barn'))
+  end
 end
