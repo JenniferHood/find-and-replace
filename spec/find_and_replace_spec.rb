@@ -9,4 +9,8 @@ describe("String#find_and_replace") do
   it('does not replace the first word if it does not match the first argument') do
     expect('coffee'.find_and_replace('tea', 'milk')).to(eq('coffee'))
   end
+
+  it('works on strings that has two words') do
+    expect('the bird'.find_and_replace('bird', 'duck')).to(eq('the duck'))
+  end
 end
